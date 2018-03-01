@@ -1,0 +1,56 @@
+.card{
+}
+
+ .card:hover {
+      box-shadow:  4px 4px 15px rgba(0,0,0,0.7); 
+   transition: scale 0.5s ease; 
+     transform: scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:100%;
+}
+.card-img{
+  height:300px;
+}
+.card img:hover{
+}
+.card-title{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card-footer{
+ text-align:right;
+  padding: 10px;
+  background-color: #4192f4;
+  color:#eef9ea;
+}
+.card-footer button{
+  border:none;
+/*   border-radius:10px; */
+  padding:5px 15px;
+/*   display:inline block; */
+  color:white;
+  cursor: pointer;
+}
+.card-footer button.success{
+  background-color:#00ff88;
+}
+.card-footer button.danger{
+  background-color:#ff6666;
+}
+.card-footer button.info{
+  background-color:#ffdb4d;
+}
+.card-footer button:hover {
+  color:  #eef9ea;
+  
+}
+.card-content {
+  padding:10px;
+  text-align:justify;
+  background-color:#f2f2f2
+}
