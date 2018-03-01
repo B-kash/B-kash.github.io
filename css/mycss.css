@@ -1,9 +1,11 @@
 .card{
+
+  box-shadow:  4px 4px 15px rgba(0,0,0,0.7); 
 }
 
  .card:hover {
       box-shadow:  4px 4px 15px rgba(0,0,0,0.7); 
-   transition: scale 0.5s ease; 
+   transition: scale 0.9s ease; 
      transform: scale(1.03);
 }
 
@@ -30,9 +32,7 @@
 }
 .card-footer button{
   border:none;
-/*   border-radius:10px; */
   padding:5px 15px;
-/*   display:inline block; */
   color:white;
   cursor: pointer;
 }
@@ -52,5 +52,11 @@
 .card-content {
   padding:10px;
   text-align:justify;
-  background-color:#f2f2f2
+  /*background-color:#f2f2f2*/
+}
+.logo-head{
+  color: white;
+}
+.logo-body{
+  color: white;
 }
