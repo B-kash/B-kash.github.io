@@ -40,3 +40,24 @@ animMeter();
             }
         });
     });
+function validateAndSubmit(){
+    var form = document.getElementById("messageForm");
+    var name = document.getElementById("name");
+    var message = document.getElementById("message");
+    var email = document.getElementById("email");
+
+    console.log("name",name.value);
+    console.log("mesage",message.value);
+    console.log("email",email.value);
+    var data = {
+        name:name,
+        message:message,
+        email:email
+    };
+    $.ajax({
+        type: "POST",
+        data :JSON.stringify(data),
+        url: "api/Customer",
+        contentType: "application/json"
+    });
+}
