@@ -50,14 +50,24 @@ function validateAndSubmit(){
     console.log("mesage",message.value);
     console.log("email",email.value);
     var data = {
-        name:name,
-        message:message,
-        email:email
+        name:name.value,
+        message:message.value,
+        email:email.value
     };
-    $.ajax({
-        type: "POST",
-        data :JSON.stringify(data),
-        url: "api/Customer",
-        contentType: "application/json"
-    });
+
+
+    $.ajax(
+        {
+            data:JSON.stringify(data),
+            url:"http://localhost:3000/messages",
+            method:'POST',
+            success: function(){
+                alert("Post successsful");
+            }
+
+        }
+    )
+    // $.post("http://localhost:3000/messages",data,function () {
+    //     alert("Post successsful");
+    // })
 }
