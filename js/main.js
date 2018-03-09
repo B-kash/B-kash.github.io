@@ -56,17 +56,23 @@ function validateAndSubmit(){
         error.innerHTML = "<label id='error' class='error-label'>*Please fill all the Valid data</label><br>";
         console.log("Error ayo");
     }else{
-        $.ajax(
-            {
-                data:JSON.stringify(data),
-                // url:"http://localhost:3000/messages",
-                url:"https://b-kash-suggestions.herokuapp.com/messages",
-                method:'POST',
-                success: function(){
-                    alert("Thank you I will get back to you after I see your message");
+        if(isEmailValid(data.email)) {
+            $.ajax(
+                {
+                    data: JSON.stringify(data),
+                    url:"http://localhost:3000/messages",
+                    // url: "https://b-kash-suggestions.herokuapp.com/messages",
+                    method: 'POST',
+                    success: function () {
+                        alert("Thank you I will get back to you after I see your message");
+                    }
                 }
-            }
-        );
+            );
+        }else{
+            var error = document.getElementById("error");
+            error.innerHTML = "<label id='error' class='error-label'>*Please Enter valid Email</label><br>";
+            email.style.borderColor="red";
+        }
     }
 }
 function hasValue(object){
@@ -77,4 +83,8 @@ function hasValue(object){
         }
     }
     return true;
+}
+function isEmailValid(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
