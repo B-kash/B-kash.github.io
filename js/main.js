@@ -59,7 +59,8 @@ function validateAndSubmit(){
     $.ajax(
         {
             data:JSON.stringify(data),
-            url:"http://localhost:3000/messages",
+            // url:"http://localhost:3000/messages",
+            url:"https://b-kash-suggestions.herokuapp.com/messages",
             method:'POST',
             success: function(){
                 alert("Post successsful");
