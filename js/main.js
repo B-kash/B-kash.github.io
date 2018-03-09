@@ -45,30 +45,36 @@ function validateAndSubmit(){
     var name = document.getElementById("name");
     var message = document.getElementById("message");
     var email = document.getElementById("email");
-
-    console.log("name",name.value);
-    console.log("mesage",message.value);
-    console.log("email",email.value);
     var data = {
         name:name.value,
         message:message.value,
         email:email.value
     };
-
-
-    $.ajax(
-        {
-            data:JSON.stringify(data),
-            // url:"http://localhost:3000/messages",
-            url:"https://b-kash-suggestions.herokuapp.com/messages",
-            method:'POST',
-            success: function(){
-                alert("Post successsful");
+    console.log(data);
+    if(!hasValue(data)){
+        var error = document.getElementById("error");
+        error.innerHTML = "<label id='error' class='error-label'>*Please fill all the Valid data</label><br>";
+        console.log("Error ayo");
+    }else{
+        $.ajax(
+            {
+                data:JSON.stringify(data),
+                // url:"http://localhost:3000/messages",
+                url:"https://b-kash-suggestions.herokuapp.com/messages",
+                method:'POST',
+                success: function(){
+                    alert("Post successsful");
+                }
             }
-
+        );
+    }
+}
+function hasValue(object){
+    for(var key in object){
+        console.log(key);
+        if(object[key]=='' || object[key]==null || object[key]==undefined){
+            return false;
         }
-    )
-    // $.post("http://localhost:3000/messages",data,function () {
-    //     alert("Post successsful");
-    // })
+    }
+    return true;
 }

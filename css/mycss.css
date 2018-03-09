@@ -71,3 +71,6 @@
     margin-bottom: 16px;
     resize: vertical;
 }
+.error-label{
+    color: red;
+}
