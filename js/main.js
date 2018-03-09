@@ -63,7 +63,7 @@ function validateAndSubmit(){
                 url:"https://b-kash-suggestions.herokuapp.com/messages",
                 method:'POST',
                 success: function(){
-                    alert("Post successsful");
+                    alert("Thank you I will get back to you after I see your message");
                 }
             }
         );
