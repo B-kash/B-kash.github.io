@@ -59,9 +59,8 @@ function validateAndSubmit(){
         if(isEmailValid(data.email)) {
             $.ajax(
                 {
-                    data: JSON.stringify(data),
-//                    url:"http://localhost:3000/messages",
-                     url: "https://b-kash-suggestions.herokuapp.com/messages",
+                    data: data,
+                    url: "https://b-kash-suggestions.herokuapp.com/messages",
                     method: 'POST',
                     success: function () {
                         alert("Thank you I will get back to you after I see your message");
@@ -73,9 +72,10 @@ function validateAndSubmit(){
             error.innerHTML = "<label id='error' class='error-label'>*Please Enter valid Email</label><br>";
             email.style.borderColor="red";
         }
+        //
     }
 }
-function hasValue(object){
+function hasValue(      object){
     for(var key in object){
         console.log(key);
         if(object[key]=='' || object[key]==null || object[key]==undefined){
