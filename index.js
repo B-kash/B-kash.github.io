@@ -1,6 +1,5 @@
 $(document).ready(function () {
     console.log("Document is ready");
-    // preload('/.assets/lokta.png');
     $('#book').turn({
         width: 1000,
         height: 700,
@@ -8,9 +7,6 @@ $(document).ready(function () {
         gradients: true,
         acceleration: true,
         inclination: 100,
-    });
-    (document.querySelector('.page') || []).forEach(page => {
-        page.style.setProperty('--background-image', image);
     });
 });
 $(document).keydown(function (e) {
