@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevAbyss Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,2000,3000,4000,6000,7000,9001,2001,3001,4001,6001,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="./libs/turn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preload" href="./assets/lokta.png" as="image"> -->
+
+
+</head>
+
+<body class=".titillium-web-black">
+    <div id="book">
+        <div class="page hard" id="cover">
+            <div class="page-content">
+                <h1 class="titillium-web-bold">🚀 Welcome to My Portfolio</h1>
+                <p>Press left ⬅️ or right ➡️ arrow to navigate the book</p>
+            </div>
+        </div>
+        <div class="page hard" id="cover-back"></div>
+        <div class="page" id="toc">
+            <div class="page-content">
+                <h2>📖 Table of Contents</h2>
+                <ul>
+                    <li><a href="#" onclick="goToPage(4)">👤 About Me</a></li>
+                    <li><a href="#" onclick="goToPage(5)">🛠️ Skills</a></li>
+                    <li><a href="#" onclick="goToPage(6)">💼 Projects</a></li>
+                    <li><a href="#" onclick="goToPage(7)">🌍 Socials</a></li>
+                </ul>
+                <div class="center-content titillium-web-bold">
+                    <p> Hover over 🕴 the corner of the pages to see the magic!! 🪄</p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page-content">
+                <h2> 👤 About Me</h2>
+                <p> 👋 Hi, I'm Bikash, a passionate full stack developer.</p>
+                <p> 🌟 I specialize in creating smooth, interactive, and user-friendly web applications </p>
+                <p> My journey 🛣️ in development started from 2016, and I’ve been crafting digital experiences ever
+                    since! 🎉 </p>
+                <p>I enjoy solving complex problems and bringing creative ideas to life through code 🌱</p>
+                <p>My skill set 🛠️ includes HTML, CSS, JavaScript, Typescript, Nodejs, Java, Golang and various
+                    frameworks
+                    and tools.</p>
+                <p>I believe 💪 in clean code, scalability, and optimizing performance for a seamless user experience.
+                </p>
+                <p>Beyond coding, I love exploring new tech trends and staying updated with the industry 🥸</p>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page-content">
+                <h2> 🛠️ Skills</h2>
+                <h3>💻 Programming Languages</h3>
+                <div class="progress-bar">
+                    <div data-width="95%" data-width="95%">Node.js (95%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="95%">JavaScript (95%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="95%">Typescript (95%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="85%">HTML/CSS (85%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="70%">Java (70%)</div>
+                </div>
+                <h3>⚙️ Frameworks & Libraries</h3>
+                <div class="progress-bar">
+                    <div data-width="75%">Nestjs (80%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="75%">React (75%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="80%">Angular (80%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="75%">Vue (75%)</div>
+                </div>
+                <h3>🔧 Software & Tools</h3>
+                <div class="progress-bar">
+                    <div data-width="85%">Git (85%)</div>
+                </div>
+                <div class="progress-bar">
+                    <div data-width="80%">Docker (80%)</div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page-content">
+                <h2>💼 Projects</h2>
+                <p>🚗 <strong>Trade-Engine:</strong> A sleek web app for vehicle trading. <br> <a
+                        href="https://trade.mywaypro.be/" target="_blank">Explore</a>.</p>
+                <hr>
+                <p>🤖 <strong>Chatlayer:</strong> Build smart AI-driven chatbots! <br><a
+                        href="https://app.chatlayer.ai/" target="_blank">Explore</a>.</p>
+                <hr>
+                <p>🎥 <strong>TheoPlayer:</strong> Next-gen real-time video streaming.<br> <a
+                        href="https://www.theoplayer.com/product/theolive" target="_blank">Explore</a>.</p>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="page-content">
+                <h2>🌍 Socials</h2>
+                <p>Let's connect! 🤝</p>
+                <div class="social-icons">
+                    <a href="https://github.com/B-kash" target="_blank"><img src="./assets/github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/b-kash/" target="_blank"><img src="./assets/linkdin.png"
+                            alt="LinkedIn"></a>
+                    <a href="https://codepen.io/B-kash" target="_blank"><img src="./assets/codepen.png"
+                            alt="CodePen" /></a>
+                </div>
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:bikashchapagain047@gmail.com">bikashchapagain047@gmail.com</a></p>
+                    <p>📞 Phone: +32484137028</p>
+                </div>
+            </div>
+        </div>
+        <div class="page hard" id="back-cover">
+            <div class="page-content">
+                🎉 Thank you for visiting my portfolio
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    font-family: "Titillium Web", sans-serif;
+    color: #333;
+}
+
+#book {
+    width: 1000px;
+    height: 800px;
+    position: relative;
+}
+
+.page {
+    width: 500px;
+    height: 700px;
+    background-color: #dbcca3;
+    /* background-image: image; */
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    inset: 0px auto auto 0px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
+    transform-origin: 100% 50%;
+}
+
+.page-content {
+    padding: 40px;
+}
+
+.page h2,
+.page p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.page:nth-child(even) {
+    background-color: #dbcca2;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#toc ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+#toc ul li {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+#toc ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#book:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(42, 42, 42, 0.6), rgba(10, 10, 42, 0.6));
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 1;
+}
+
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar div {
+    height: 20px;
+    background: linear-gradient(90deg, #4caf50, #2e7d32);
+    text-align: right;
+    padding-right: 5px;
+    line-height: 20px;
+    color: white;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.progress-bar div.animate {
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--width);
+    }
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #141414;
+    margin: 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.titillium-web-extralight {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.titillium-web-light {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titillium-web-semibold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.titillium-web-black {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.titillium-web-light-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.titillium-web-regular-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.titillium-web-bold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
