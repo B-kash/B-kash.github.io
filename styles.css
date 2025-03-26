@@ -31,6 +31,13 @@ body {
     padding: 40px;
 }
 
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
 .page h2,
 .page p {
     margin: 0;
@@ -52,7 +59,8 @@ body {
 
 #toc ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
+    margin: 10px;
 
 }
 
